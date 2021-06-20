@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'userManagement'    => [
+    'userManagement' => [
         'title'          => 'User management',
         'title_singular' => 'User management',
     ],
-    'permission'        => [
+    'permission' => [
         'title'          => 'Permissions',
         'title_singular' => 'Permission',
         'fields'         => [
@@ -21,7 +21,7 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
-    'role'              => [
+    'role' => [
         'title'          => 'Roles',
         'title_singular' => 'Role',
         'fields'         => [
@@ -39,7 +39,7 @@ return [
             'deleted_at_helper'  => ' ',
         ],
     ],
-    'user'              => [
+    'user' => [
         'title'          => 'Users',
         'title_singular' => 'User',
         'fields'         => [
@@ -63,13 +63,15 @@ return [
             'updated_at_helper'        => ' ',
             'deleted_at'               => 'Deleted at',
             'deleted_at_helper'        => ' ',
+            'team'                     => 'Team',
+            'team_helper'              => ' ',
         ],
     ],
     'productManagement' => [
         'title'          => 'Product Management',
         'title_singular' => 'Product Management',
     ],
-    'productCategory'   => [
+    'productCategory' => [
         'title'          => 'Categories',
         'title_singular' => 'Category',
         'fields'         => [
@@ -89,7 +91,7 @@ return [
             'deleted_at_helper'  => ' ',
         ],
     ],
-    'productTag'        => [
+    'productTag' => [
         'title'          => 'Tags',
         'title_singular' => 'Tag',
         'fields'         => [
@@ -105,7 +107,7 @@ return [
             'deleted_at_helper' => ' ',
         ],
     ],
-    'product'           => [
+    'product' => [
         'title'          => 'Products',
         'title_singular' => 'Product',
         'fields'         => [
@@ -130,5 +132,151 @@ return [
             'deleted_at'         => 'Deleted At',
             'deleted_at_helper'  => ' ',
         ],
+    ],
+    'invoice' => [
+        'title'          => 'Invoices',
+        'title_singular' => 'Invoice',
+    ],
+    'basicCRM' => [
+        'title'          => 'Basic CRM',
+        'title_singular' => 'Basic CRM',
+    ],
+    'crmStatus' => [
+        'title'          => 'Statuses',
+        'title_singular' => 'Status',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'name'              => 'Name',
+            'name_helper'       => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated At',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted At',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
+    'crmCustomer' => [
+        'title'          => 'Customers',
+        'title_singular' => 'Customer',
+        'fields'         => [
+            'id'                 => 'ID',
+            'id_helper'          => ' ',
+            'first_name'         => 'First name',
+            'first_name_helper'  => ' ',
+            'last_name'          => 'Last name',
+            'last_name_helper'   => ' ',
+            'status'             => 'Status',
+            'status_helper'      => ' ',
+            'email'              => 'Email',
+            'email_helper'       => ' ',
+            'phone'              => 'Phone',
+            'phone_helper'       => ' ',
+            'address'            => 'Address',
+            'address_helper'     => ' ',
+            'website'            => 'Website',
+            'website_helper'     => ' ',
+            'description'        => 'Description',
+            'description_helper' => ' ',
+            'created_at'         => 'Created at',
+            'created_at_helper'  => ' ',
+            'updated_at'         => 'Updated At',
+            'updated_at_helper'  => ' ',
+            'deleted_at'         => 'Deleted At',
+            'deleted_at_helper'  => ' ',
+            'city'               => 'City',
+            'city_helper'        => ' ',
+            'state'              => 'State',
+            'state_helper'       => ' ',
+            'zip_code'           => 'Zip Code',
+            'zip_code_helper'    => ' ',
+        ],
+    ],
+    'crmNote' => [
+        'title'          => 'Notes',
+        'title_singular' => 'Note',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'customer'          => 'Customer',
+            'customer_helper'   => ' ',
+            'note'              => 'Note',
+            'note_helper'       => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated At',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted At',
+            'deleted_at_helper' => ' ',
+        ],
+    ],
+    'crmDocument' => [
+        'title'          => 'Documents',
+        'title_singular' => 'Document',
+        'fields'         => [
+            'id'                   => 'ID',
+            'id_helper'            => ' ',
+            'customer'             => 'Customer',
+            'customer_helper'      => ' ',
+            'document_file'        => 'File',
+            'document_file_helper' => ' ',
+            'name'                 => 'Document name',
+            'name_helper'          => ' ',
+            'description'          => 'Description',
+            'description_helper'   => ' ',
+            'created_at'           => 'Created at',
+            'created_at_helper'    => ' ',
+            'updated_at'           => 'Updated At',
+            'updated_at_helper'    => ' ',
+            'deleted_at'           => 'Deleted At',
+            'deleted_at_helper'    => ' ',
+        ],
+    ],
+    'auditLog' => [
+        'title'          => 'Audit Logs',
+        'title_singular' => 'Audit Log',
+        'fields'         => [
+            'id'                  => 'ID',
+            'id_helper'           => ' ',
+            'description'         => 'Description',
+            'description_helper'  => ' ',
+            'subject_id'          => 'Subject ID',
+            'subject_id_helper'   => ' ',
+            'subject_type'        => 'Subject Type',
+            'subject_type_helper' => ' ',
+            'user_id'             => 'User ID',
+            'user_id_helper'      => ' ',
+            'properties'          => 'Properties',
+            'properties_helper'   => ' ',
+            'host'                => 'Host',
+            'host_helper'         => ' ',
+            'created_at'          => 'Created at',
+            'created_at_helper'   => ' ',
+            'updated_at'          => 'Updated at',
+            'updated_at_helper'   => ' ',
+        ],
+    ],
+    'team' => [
+        'title'          => 'Teams',
+        'title_singular' => 'Team',
+        'fields'         => [
+            'id'                => 'ID',
+            'id_helper'         => ' ',
+            'created_at'        => 'Created at',
+            'created_at_helper' => ' ',
+            'updated_at'        => 'Updated At',
+            'updated_at_helper' => ' ',
+            'deleted_at'        => 'Deleted At',
+            'deleted_at_helper' => ' ',
+            'name'              => 'Name',
+            'name_helper'       => ' ',
+            'owner'             => 'Owner',
+            'owner_helper'      => ' ',
+        ],
+    ],
+    'setting' => [
+        'title'          => 'Settings',
+        'title_singular' => 'Setting',
     ],
 ];
