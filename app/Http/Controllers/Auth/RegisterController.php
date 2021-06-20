@@ -33,18 +33,24 @@ class RegisterController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm()
+    {
+        if (request()->has('signature') && !request()->hasValidSignature()) {
+            return redirect()->route('register');
+        }
+
+        return view('auth.register');
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -59,15 +65,26 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
      * @return \App\User
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name'     => $data['name'],
             'email'    => $data['email'],
             'password' => Hash::make($data['password']),
+            'team_id'  => request()->input('team', null),
         ]);
+
+        if (!request()->has('team')) {
+            $team = \App\Models\Team::create([
+                'owner_id' => $user->id,
+                'name'     => $data['email'],
+            ]);
+
+            $user->update(['team_id' => $team->id]);
+        }
+
+        return $user;
     }
 }
