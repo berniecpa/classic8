@@ -146,6 +146,33 @@
                         </ul>
                     </li>
                 @endcan
+                @can('invoice_access')
+                    <li class="nav-item has-treeview {{ request()->is("admin/invoice-templates*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="fa-fw nav-icon fas fa-file-invoice-dollar">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.invoice.title') }}
+                                <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('invoice_template_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.invoice-templates.index") }}" class="nav-link {{ request()->is("admin/invoice-templates") || request()->is("admin/invoice-templates/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.invoiceTemplate.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
                 @can('basic_c_r_m_access')
                     <li class="nav-item has-treeview {{ request()->is("admin/crm-statuses*") ? "menu-open" : "" }} {{ request()->is("admin/crm-customers*") ? "menu-open" : "" }} {{ request()->is("admin/crm-notes*") ? "menu-open" : "" }} {{ request()->is("admin/crm-documents*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
@@ -202,6 +229,33 @@
                                         </i>
                                         <p>
                                             {{ trans('cruds.crmDocument.title') }}
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
+                        </ul>
+                    </li>
+                @endcan
+                @can('setting_access')
+                    <li class="nav-item has-treeview {{ request()->is("admin/connected-apps*") ? "menu-open" : "" }}">
+                        <a class="nav-link nav-dropdown-toggle" href="#">
+                            <i class="fa-fw nav-icon fas fa-wrench">
+
+                            </i>
+                            <p>
+                                {{ trans('cruds.setting.title') }}
+                                <i class="right fa fa-fw fa-angle-left nav-icon"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            @can('connected_app_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.connected-apps.index") }}" class="nav-link {{ request()->is("admin/connected-apps") || request()->is("admin/connected-apps/*") ? "active" : "" }}">
+                                        <i class="fa-fw nav-icon fas fa-cogs">
+
+                                        </i>
+                                        <p>
+                                            {{ trans('cruds.connectedApp.title') }}
                                         </p>
                                     </a>
                                 </li>

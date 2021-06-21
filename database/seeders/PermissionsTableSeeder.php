@@ -260,6 +260,46 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'    => 63,
+                'title' => 'connected_app_create',
+            ],
+            [
+                'id'    => 64,
+                'title' => 'connected_app_edit',
+            ],
+            [
+                'id'    => 65,
+                'title' => 'connected_app_show',
+            ],
+            [
+                'id'    => 66,
+                'title' => 'connected_app_delete',
+            ],
+            [
+                'id'    => 67,
+                'title' => 'connected_app_access',
+            ],
+            [
+                'id'    => 68,
+                'title' => 'invoice_template_create',
+            ],
+            [
+                'id'    => 69,
+                'title' => 'invoice_template_edit',
+            ],
+            [
+                'id'    => 70,
+                'title' => 'invoice_template_show',
+            ],
+            [
+                'id'    => 71,
+                'title' => 'invoice_template_delete',
+            ],
+            [
+                'id'    => 72,
+                'title' => 'invoice_template_access',
+            ],
+            [
+                'id'    => 73,
                 'title' => 'profile_password_edit',
             ],
         ];
