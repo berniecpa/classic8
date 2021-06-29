@@ -66,6 +66,18 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('teams/destroy', 'TeamController@massDestroy')->name('teams.massDestroy');
     Route::resource('teams', 'TeamController');
 
+    // Connected Apps
+    Route::delete('connected-apps/destroy', 'ConnectedAppsController@massDestroy')->name('connected-apps.massDestroy');
+    Route::resource('connected-apps', 'ConnectedAppsController');
+
+    // Invoice Template
+    Route::delete('invoice-templates/destroy', 'InvoiceTemplateController@massDestroy')->name('invoice-templates.massDestroy');
+    Route::resource('invoice-templates', 'InvoiceTemplateController');
+
+    // Invoice Display
+    Route::delete('invoice-displays/destroy', 'InvoiceDisplayController@massDestroy')->name('invoice-displays.massDestroy');
+    Route::resource('invoice-displays', 'InvoiceDisplayController');
+
     Route::get('team-members', 'TeamMembersController@index')->name('team-members.index');
     Route::post('team-members', 'TeamMembersController@invite')->name('team-members.invite');
 });

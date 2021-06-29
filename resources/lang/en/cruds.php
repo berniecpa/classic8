@@ -279,4 +279,16 @@ return [
         'title'          => 'Settings',
         'title_singular' => 'Setting',
     ],
+    'connectedApp' => [
+        'title'          => 'Connected Apps',
+        'title_singular' => 'Connected App',
+    ],
+    'invoiceTemplate' => [
+        'title'          => 'Invoice Template',
+        'title_singular' => 'Invoice Template',
+    ],
+    'invoiceDisplay' => [
+        'title'          => 'Invoice Display',
+        'title_singular' => 'Invoice Display',
+    ],
 ];
